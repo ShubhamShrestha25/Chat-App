@@ -31,6 +31,7 @@ const Container = styled.div`
 const Chat = () => {
   const [contacts, setContacts] = useState([]);
   const [currentUser, setCurrentUser] = useState(undefined);
+  const [currentChat, setCurrentChat] = useState(undefined);
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -58,10 +59,18 @@ const Chat = () => {
     checkCurrentUser();
   }, [currentUser, navigate]);
 
+  const handleChatChange = (chat) => {
+    setCurrentChat(chat);
+  };
+
   return (
     <Container>
       <div className="container">
-        <Contacts contacts={contacts} />
+        <Contacts
+          contacts={contacts}
+          currentUser={currentUser}
+          changeChat={handleChatChange}
+        />
       </div>
     </Container>
   );
