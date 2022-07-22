@@ -57,7 +57,7 @@ const Container = styled.div`
   }
   .input-container {
     width: 100%;
-    height: 100%;
+    height: 60%;
     border-radius: 2rem;
     display: flex;
     align-items: center;
@@ -65,7 +65,7 @@ const Container = styled.div`
     background-color: #ffffff34;
     input {
       width: 90%;
-      height: 100%;
+      height: 70%;
       background-color: transparent;
       color: white;
       border: none;
